@@ -1,0 +1,70 @@
+<div class="form-container">
+  <h2>Activity Form</h2>
+  <form (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label>Title:</label>
+      <input [(ngModel)]="formData.title" name="title" required />
+    </div>
+
+    <div class="form-group">
+      <label>Description:</label>
+      <textarea [(ngModel)]="formData.description" name="description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Activity Type:</label>
+      <input [(ngModel)]="formData.activityType" name="activityType" />
+    </div>
+
+    <div class="form-group">
+      <label>Intake ID:</label>
+      <input [(ngModel)]="formData.intakeId" name="intakeId" />
+    </div>
+
+    <div class="form-group">
+      <label>Room ID:</label>
+      <input [(ngModel)]="formData.roomId" name="roomId" />
+    </div>
+
+    <div class="form-group">
+      <label>Component ID:</label>
+      <input [(ngModel)]="formData.componentId" name="componentId" />
+    </div>
+
+    <div class="form-group">
+      <label>Module ID:</label>
+      <input [(ngModel)]="formData.moduleId" name="moduleId" />
+    </div>
+
+    <div class="form-group">
+      <label>Start Day:</label>
+      <input type="date" [(ngModel)]="formData.startDay" name="startDay" />
+    </div>
+
+    <div class="form-group">
+      <label>End Day:</label>
+      <input type="date" [(ngModel)]="formData.endDay" name="endDay" />
+    </div>
+
+    <div class="form-group">
+      <label>Start Time:</label>
+      <input type="number" min="0" max="23" [(ngModel)]="formData.startTime.hour" name="startHour" placeholder="Hour" />
+      <input type="number" min="0" max="59" [(ngModel)]="formData.startTime.minute" name="startMinute" placeholder="Minute" />
+    </div>
+
+    <div class="form-group">
+      <label>End Time:</label>
+      <input type="number" min="0" max="23" [(ngModel)]="formData.endTime.hour" name="endHour" placeholder="Hour" />
+      <input type="number" min="0" max="59" [(ngModel)]="formData.endTime.minute" name="endMinute" placeholder="Minute" />
+    </div>
+
+    <div class="form-group">
+      <label>Activity Level:</label>
+      <input [(ngModel)]="formData.activityLevelResponses[0].id" name="levelId" placeholder="ID" />
+      <input [(ngModel)]="formData.activityLevelResponses[0].level" name="level" placeholder="Level" />
+      <input [(ngModel)]="formData.activityLevelResponses[0].levelRefId" name="levelRefId" placeholder="Level Ref ID" />
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
